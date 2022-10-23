@@ -2,7 +2,7 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/blood
 local w = library:CreateWindow('Misc')
 w:Section('Misc')
 local b = w:Button("Find Smallest Servers", function()
-    wait(0.5)
+    wait(0.0001)
     local Http = game:GetService("HttpService")
     local TPS = game:GetService("TeleportService")
     local Api = "https://games.roblox.com/v1/games/"
