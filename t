@@ -22,23 +22,3 @@ local b = w:Button("Find Smallest Servers", function()
 
     TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
 end)
-
-local box = w:Box('WalkSpeed', {
-   flag = "ws";
-   type = 'number';
-}, function(new, old, enter)
-   print(new, old, enter)
-   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = tonumber(new)
-end)
-
-local old = workspace.CurrentCamera.FieldOfView
-local s = w:Slider("FOV", {
-   min = math.floor(workspace.CurrentCamera.FieldOfView);
-   max = 120;
-   flag = 'fov'
-}, function(v)
-   workspace.CurrentCamera.FieldOfView = v;
-end)
-local b2 = w:Button('Reset FOV', function()
-   s:Set(old)
-end)
